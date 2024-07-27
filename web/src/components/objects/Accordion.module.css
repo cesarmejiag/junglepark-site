@@ -1,0 +1,49 @@
+.accordion {
+}
+
+.item {
+  border-bottom: 1px solid rgba(41, 61, 57, 0.2);
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.itemExpanded .selector::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.itemExpanded .content {
+  display: block;
+}
+
+.selector {
+  color: #4a583d;
+  display: block;
+  font-family: var(--font-dimbo);
+  font-size: 38px;
+  line-height: 100%;
+  position: relative;
+  text-align: left;
+  width: 100%;
+}
+
+.selector::after {
+  background: transparent no-repeat right center
+    url("/images/icon-dropdown.svg");
+  background-size: cover;
+  display: block;
+  content: "";
+  height: 19px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%) rotate(0);
+  width: 34px;
+}
+
+.content {
+  color: #3f3f3f;
+  display: none;
+  font-size: 22px;
+}

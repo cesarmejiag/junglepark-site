@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: var(--font-mulish);
+}
+
+/* Override swipper custom pagination. */
+.swiper-pagination-bullet-active {
+  background: #d9d9d9 !important;
+}

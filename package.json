@@ -1,0 +1,19 @@
+{
+  "name": "junglepark-site",
+  "private": true,
+  "scripts": {
+    "dev": "lerna run dev --parallel",
+    "dev-web": "lerna run dev --scope=web",
+    "dev-studio": "lerna run dev --scope=studio",
+    "build-web": "lerna bootstrap && (cd web && npm run build)",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "workspaces": [
+    "studio",
+    "web"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^8.1.7"
+  }
+}

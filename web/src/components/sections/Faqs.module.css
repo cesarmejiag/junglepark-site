@@ -1,0 +1,9 @@
+.faqs {
+  background: #dad3be;
+}
+
+.faqsTitle {
+  color: #293d39;
+  font-family: var(--font-dimbo);
+  font-size: 56px;
+}
