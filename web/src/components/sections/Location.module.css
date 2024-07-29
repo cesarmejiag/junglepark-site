@@ -1,3 +1,50 @@
 .location {
-  background: #293D39;
+  background: #293d39;
+}
+
+.title {
+  color: #cec8af;
+  font-family: var(--font-dimbo);
+  font-size: 32px;
+  margin-bottom: 20px;
+  line-height: 100%;
+  text-align: center;
+}
+
+.body {
+  color: #b1af8d;
+  font-size: 22px;
+  line-height: 100%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+}
+
+.socialLinks li {
+  padding: 0 15px;
+}
+
+.socialLinks img {
+  height: 25px;
+  object-fit: cover;
+  object-position: center center;
+  width: 25px;
+}
+
+.image {
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.image img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  position: absolute;
+  width: 100%;
 }

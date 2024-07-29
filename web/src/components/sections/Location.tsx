@@ -20,17 +20,23 @@ type TypeLocation = {
   ctas: any;
 };
 
-export default function Location({ title, body, socialLinks }: TypeLocation) {
+export default function Location({
+  title,
+  body,
+  socialLinks,
+  url,
+  image,
+}: TypeLocation) {
   return (
     <section className={styles.location}>
       <div className="flex">
-        <div>
-          <h2 className="title">{title}</h2>
-          <div>
-            <BlockContent blocks={body} />
-          </div>
-          <div>
-            <ul>
+        <div className="w-[35%]">
+          <div className="max-w-[527px] ml-auto px-4 py-24">
+            <h2 className={styles.title}>{title}</h2>
+            <div className={styles.body}>
+              <BlockContent blocks={body} />
+            </div>
+            <ul className={styles.socialLinks}>
               {socialLinks.map((link) => (
                 <li key={link._key}>
                   <a href={link.href} target="_blank">
@@ -41,7 +47,13 @@ export default function Location({ title, body, socialLinks }: TypeLocation) {
             </ul>
           </div>
         </div>
-        <div></div>
+        <div className="w-[65%]">
+          <div className={styles.image}>
+            <a href={url} target="_blank">
+              <img src={urlFor(image.asset).url()} alt={image.alt} />
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
