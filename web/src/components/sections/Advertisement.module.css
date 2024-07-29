@@ -1,3 +1,51 @@
 .advertisement {
   background: #dad3be;
+  position: relative;
+  z-index: 0;
+}
+
+.advertisement::after {
+  background: transparent repeat-x center bottom
+    url("/images/texture-leafs.svg");
+  background-size: 100% auto;
+  display: block;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  opacity: 0.3;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.sign {
+  background: transparent no-repeat center center url("/images/about-sign.webp");
+  background-size: cover;
+  height: 301px;
+  position: relative;
+  width: 457px;
+}
+
+.signText {
+  padding-top: 125px;
+}
+
+.signText h2 {
+  color: #203c01;
+  font-family: var(--font-dimbo);
+  font-size: 56px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.body {
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.image {
+  margin: 0 auto;
+  max-width: 731px;
 }
