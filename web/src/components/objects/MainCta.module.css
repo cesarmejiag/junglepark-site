@@ -1,0 +1,18 @@
+.mainCta {
+  background: transparent no-repeat center center
+    url("/images/main-cta-bg.webp");
+  background-size: cover;
+  color: #3f3f3f;
+  font-family: var(--font-dimbo);
+  font-size: 26px;
+  height: 60px;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  transition: transform 375ms;
+  width: 162px;
+}
+
+.mainCta:hover {
+  transform: translateY(3px);
+}

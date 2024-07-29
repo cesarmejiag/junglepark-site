@@ -1,5 +1,9 @@
+import { LegacyRef } from "react";
+import { useParallax } from "react-scroll-parallax";
+
 import { urlFor } from "@/lib/api";
 import BlockContent from "../objects/BlockContent";
+
 import styles from "./About.module.css";
 
 export type TypeAbout = {
@@ -21,14 +25,18 @@ export type TypeAbout = {
 
 export default function About({ section }: TypeAbout) {
   const { title, body, image } = section;
+  const parallax = useParallax({
+    speed: 5,
+  });
+
   return (
     <section className={`${styles.about} pt-32 pb-28`}>
       <div className="xl:container mx-auto px-5">
         <div className="flex">
           <div className="w-5/12">
             <div className="max-w-[457px] mx-auto">
-              <div className="">
-                <div>
+              <div className={`${styles.sign} mt-[-8rem] mb-16`}>
+                <div className={styles.signText}>
                   <h4>Exploradores</h4>
                   <h3>¡Bienvenidos!</h3>
                 </div>
@@ -39,9 +47,16 @@ export default function About({ section }: TypeAbout) {
               </div>
             </div>
           </div>
-          <div className="w-7/12">
+          <div className="w-7/12 relative">
             <div className={styles.image}>
               <img src={urlFor(image?.asset).url()} alt={image?.alt} />
+            </div>
+            <div className={styles.parallaxImage}>
+              <img
+                ref={parallax.ref as LegacyRef<HTMLImageElement>}
+                src="/images/about-girl.webp"
+                alt="Niña brincando."
+              />
             </div>
           </div>
         </div>

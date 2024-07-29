@@ -6,7 +6,7 @@
     rgba(41, 61, 57, 1) 100%
   );
   position: relative;
-  z-index: 0;
+  z-index: 2;
 }
 
 .plans::after {
@@ -23,18 +23,25 @@
   z-index: -1;
 }
 
-.plansTitle {
+.title {
   color: #b1af8d;
   font-family: var(--font-dimbo);
   font-size: 56px;
   line-height: 100%;
 }
 
-.plansBody {
+.body {
   color: #b7bfb7;
   font-family: var(--font-dimbo);
   font-size: 32px;
   line-height: 100%;
+}
+
+.parallaxImage {
+  left: 0;
+  position: absolute;
+  top: 15%;
+  width: 457px;
 }
 
 .plan {

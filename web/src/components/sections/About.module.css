@@ -1,7 +1,7 @@
 .about {
   background: transparent repeat center center url("/images/texture-wall.webp");
   position: relative;
-  z-index: 0;
+  z-index: 4;
 }
 
 .about::after {
@@ -17,6 +17,34 @@
   top: 0;
   width: 100%;
   z-index: -1;
+}
+
+.sign {
+  background: transparent no-repeat center center url("/images/about-sign.webp");
+  background-size: cover;
+  height: 301px;
+  position: relative;
+  width: 457px;
+}
+
+.signText {
+  padding-top: 125px;
+}
+
+.signText h3,
+.signText h4 {
+  color: #203c01;
+  font-family: var(--font-dimbo);
+  line-height: 100%;
+  text-align: center;
+}
+
+.signText h4 {
+  font-size: 42px;
+}
+
+.signText h3 {
+  font-size: 64px;
 }
 
 .title {
@@ -36,4 +64,13 @@
 }
 
 .image {
+  max-width: 701px;
+}
+
+.parallaxImage {
+  left: -15%;
+  max-width: 396px;
+  position: absolute;
+  top: 30%;
+  width: 100%;
 }

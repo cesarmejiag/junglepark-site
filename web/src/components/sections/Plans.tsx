@@ -1,8 +1,9 @@
 import { toCurrency } from "@/lib/utils";
 import BlockContent from "../objects/BlockContent";
 import styles from "./Plans.module.css";
+import { useParallax } from "react-scroll-parallax";
 
-type PlanType = {
+type TypePlan = {
   _key: string;
   _type: string;
   title: string;
@@ -11,12 +12,12 @@ type PlanType = {
   price60: number;
 };
 
-type PlansType = {
+type TypePlans = {
   _key: string;
   _type: string;
   title: string;
   body: any;
-  plans: PlanType[];
+  plans: TypePlan[];
   cta: any;
   ctas: any;
 };
@@ -29,7 +30,7 @@ const PlanItem = ({ price, type }: { price: number; type: number }) => (
   </div>
 );
 
-const Plan = ({ title, description, price60, price120 }: PlanType) => {
+const Plan = ({ title, description, price60, price120 }: TypePlan) => {
   return (
     <div className={`${styles.plan} py-5 px-12 mb-12 flex items-center`}>
       <div className="grow">
@@ -44,18 +45,22 @@ const Plan = ({ title, description, price60, price120 }: PlanType) => {
   );
 };
 
-export default function Plans({ title, body, plans }: PlansType) {
+export default function Plans({ title, body, plans }: TypePlans) {
+  const { ref } = useParallax({ speed: 3 });
   return (
     <section className={`${styles.plans} py-52`}>
       <div className="xl:container mx-auto px-5">
         <div className="flex">
-          <div className="w-[365px]">
-            <h1 className={`${styles.plansTitle} mb-10`}>{title}</h1>
-            <div className={styles.plansBody}>
+          <div className="w-[365px] relative">
+            <h1 className={`${styles.title} mb-10`}>{title}</h1>
+            <div className={styles.body}>
               <BlockContent blocks={body} />
             </div>
+            <div ref={ref as any} className={styles.parallaxImage}>
+              <img src="/images/plans-girl.webp" alt="Niña brincando" />
+            </div>
           </div>
-          <div className="grow pl-4">
+          <div className="grow pl-12">
             {plans && plans.map((plan) => <Plan {...plan} key={plan._key} />)}
           </div>
         </div>

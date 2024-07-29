@@ -1,9 +1,46 @@
 .faqs {
   background: #dad3be;
+  position: relative;
+  z-index: 1;
 }
 
 .faqsTitle {
   color: #293d39;
   font-family: var(--font-dimbo);
   font-size: 56px;
+}
+
+.parallaxElements {
+  position: relative;
+}
+
+.parallaxElements .logo {
+  max-width: 213px;
+  margin: 0 0 10px auto;
+}
+
+.parallaxElements .shape {
+  margin: 0 auto;
+  width: 453px;
+}
+
+.parallaxElements .circles {
+  left: 27%;
+  position: absolute;
+  top: 83%;
+  width: 124px;
+}
+
+.parallaxElements .girl {
+  left: 0;
+  position: absolute;
+  top: 10%;
+  width: 335px;
+}
+
+.parallaxElements .boy {
+  left: 46%;
+  position: absolute;
+  top: 50%;
+  width: 367px;
 }

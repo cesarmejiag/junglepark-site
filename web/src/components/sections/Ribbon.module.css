@@ -1,0 +1,107 @@
+.ribbon {
+  background: transparent no-repeat center center url("/images/ribbon-bg.webp");
+  background-size: cover;
+  position: relative;
+  z-index: 3;
+}
+
+.ribbon::after {
+  background: rgba(0, 0, 0, 0.75);
+  display: block;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.main {
+  background: transparent no-repeat center center
+    url("/images/ribbon-leafs.svg");
+  height: 699px;
+  padding: 155px 16px 22px;
+  position: relative;
+  transform: translateY(14%);
+  width: 699px;
+}
+
+.logo {
+  margin: 0 auto 50px;
+  max-width: 165px;
+}
+
+.title {
+  color: #203c01;
+  font-family: var(--font-dimbo);
+  font-size: 56px;
+  line-height: 100%;
+  margin: 0 auto 30px;
+  max-width: 457px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.parallaxElements {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.parallaxElements .girl {
+  height: 564px;
+  left: -29%;
+  position: absolute;
+  top: 7%;
+  width: 299px;
+}
+
+.parallaxElements .hat {
+  height: 97px;
+  left: 16%;
+  position: absolute;
+  top: 35%;
+  width: 81px;
+}
+
+.parallaxElements .cake {
+  height: 117px;
+  left: 17%;
+  position: absolute;
+  top: 72%;
+  width: 92px;
+}
+
+.parallaxElements .candle {
+  height: 101px;
+  left: 74%;
+  position: absolute;
+  top: 3%;
+  width: 87px;
+}
+
+.parallaxElements .boy {
+  height: 476px;
+  left: 70%;
+  position: absolute;
+  top: 3%;
+  width: 241px;
+}
+
+.parallaxElements .balloons {
+  height: 189px;
+  left: 73%;
+  position: absolute;
+  top: 63%;
+  width: 105px;
+}

@@ -1,3 +1,6 @@
+"use client"
+
+import { ParallaxProvider } from "react-scroll-parallax";
 import * as SectionComponents from "./sections";
 import { upperFirst } from "@/lib/utils";
 
@@ -19,13 +22,17 @@ export default function RenderSections({ sections }: any) {
   }
   return (
     <>
-      {sections.map((section: any) => {
-        const SectionComponent = resolveSections(section);
-        if (!SectionComponent) {
-          return <div key={section._key}>Missing section {section._type}.</div>;
-        }
-        return <SectionComponent {...section} key={section._key} />;
-      })}
+      <ParallaxProvider>
+        {sections.map((section: any) => {
+          const SectionComponent = resolveSections(section);
+          if (!SectionComponent) {
+            return (
+              <div key={section._key}>Missing section {section._type}.</div>
+            );
+          }
+          return <SectionComponent {...section} key={section._key} />;
+        })}
+      </ParallaxProvider>
     </>
   );
 }
